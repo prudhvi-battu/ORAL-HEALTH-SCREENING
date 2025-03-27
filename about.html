@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - AI-Powered Oral Health</title>
+  <style>
+    /* ------------------ Global Reset & Box-Sizing ------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    /* ------------------ Body & Basic Layout (Black Theme) ------------------ */
+    body {
+      background: linear-gradient(135deg, #000 0%, #222 100%);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ------------------ Header Section ------------------ */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.07);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #0fdcff; /* Neon Accent */
+      text-shadow: 0 0 5px rgba(15, 220, 255, 0.8);
+      cursor: default;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(15, 220, 255, 0.6);
+      color: #0fdcff;
+    }
+
+    /* ------------------ Hero Section ------------------ */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x500/000/0fdcff?text=About+Oral+Health'); 
+      /* Replace with your own image URL if desired */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: inset 0 0 300px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      color: #fff;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(15, 220, 255, 0.8);
+      max-width: 80%;
+    }
+
+    /* ------------------ Main Content Container ------------------ */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ------------------ Introduction Text ------------------ */
+    .intro-text {
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .intro-text p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+
+    /* ------------------ About Topics (Cards) ------------------ */
+    .about-topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .topic-card {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(4px);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    }
+
+    .topic-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #0fdcff;
+      text-shadow: 0 0 5px rgba(15, 220, 255, 0.7);
+    }
+
+    .topic-card p {
+      font-size: 0.95rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    /* ------------------ Help Desk Section ------------------ */
+    .help-desk {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .help-desk h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #0fdcff;
+      text-shadow: 0 0 5px rgba(15, 220, 255, 0.8);
+    }
+
+    .help-desk p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+
+    .help-desk a {
+      color: #0fdcff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .help-desk a:hover {
+      text-decoration: underline;
+    }
+
+    /* ------------------ Footer ------------------ */
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 8px rgba(255, 255, 255, 0.07);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- ------------------ Header ------------------ -->
+  <header>
+    <h1>Oral Health AI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Help</a>
+    </nav>
+  </header>
+
+  <!-- ------------------ Hero Section ------------------ -->
+  <section class="hero">
+    <h2>About Us</h2>
+  </section>
+
+  <!-- ------------------ Main Content ------------------ -->
+  <div class="main-content">
+    <!-- Introduction Text -->
+    <div class="intro-text">
+      <p>
+        Welcome to our AI-Powered Oral Health platform. Our mission is to
+        revolutionize dental care by offering intelligent, accessible, and 
+        efficient solutions for all. From diagnosing oral diseases to educating
+        individuals on preventive measures, we are dedicated to 
+        elevating your oral health journey.
+      </p>
+      <p>
+        Below, you'll find more information on critical oral health topics, 
+        along with practical tips and motivations to keep your teeth and gums 
+        healthy. Remember—good oral health is a cornerstone of overall well-being!
+      </p>
+    </div>
+
+    <!-- About Topics (Cards for each topic) -->
+    <div class="about-topics">
+      <!-- About Oral Health -->
+      <div class="topic-card">
+        <h3>About Oral Health</h3>
+        <p>
+          Oral health involves taking care of your mouth, teeth, and gums to 
+          prevent common issues like tooth decay, bad breath, and gum disease.
+        </p>
+      </div>
+
+      <!-- About Caries -->
+      <div class="topic-card">
+        <h3>About Caries</h3>
+        <p>
+          Dental caries, or cavities, occur when bacteria in the mouth produce 
+          acids that erode the enamel. Proper brushing, flossing, and regular 
+          check-ups can prevent caries.
+        </p>
+      </div>
+
+      <!-- About Calculus -->
+      <div class="topic-card">
+        <h3>About Calculus</h3>
+        <p>
+          Calculus (tartar) is hardened plaque on the teeth. It can cause gum 
+          irritation and more severe periodontal issues if left untreated. 
+          Professional cleanings are essential.
+        </p>
+      </div>
+
+      <!-- About Gingivitis -->
+      <div class="topic-card">
+        <h3>About Gingivitis</h3>
+        <p>
+          Gingivitis is inflammation of the gums due to plaque buildup. 
+          Symptoms include redness, swelling, and bleeding. Early intervention 
+          can prevent serious gum disease.
+        </p>
+      </div>
+    </div>
+
+    <!-- Precautions & Motivation -->
+    <div class="intro-text">
+      <p>
+        <strong>Precautions:</strong> Maintain a consistent oral hygiene routine: 
+        brush twice a day, floss daily, and limit sugary foods. Regular dentist 
+        visits help detect issues early.
+      </p>
+      <p>
+        <strong>Motivation:</strong> Taking care of your mouth not only ensures 
+        a beautiful smile but also prevents health complications. If you notice 
+        any signs like redness, swelling, or pain, don’t delay—consult a dentist.
+      </p>
+    </div>
+
+    <!-- Help Desk Section -->
+    <div class="help-desk">
+      <h2>Help Desk</h2>
+      <p>For any queries, contact us at:</p>
+      <p>
+        <a href="mailto:prudhvi.battu@gmail.com">prudhvi.battu@gmail.com</a>, 
+        <a href="mailto:prudhvistoic@gmail.com">prudhvistoic@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ------------------ Footer ------------------ -->
+  <footer>
+    <p>&copy; 2025 Oral Health AI. All rights reserved.</p>
+  </footer>
+</body>
+</html>
